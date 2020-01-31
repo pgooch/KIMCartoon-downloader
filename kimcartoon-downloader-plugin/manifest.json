@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "KimCartoon Downloader",
+	"version": "1.0.0",
+	"description": "This plugin will give you the ability to download an entire season from KimCartoon with a single click.",
+	"icons" : {
+		"128" : "icon-128.png"
+	},
+	"background": {
+		"scripts" : ["background.js"]
+	},
+	"content_scripts" : [
+		{
+			"matches" : ["https://kimcartoon.to/Cartoon/*"],
+			"js" : ["jquery.js","content.js"]
+		}
+	],
+	"permissions": [
+		"https://kimcartoon.to/Cartoon/*",
+		"tabs",
+		"background",
+		"downloads"
+	],
+	"web_accessible_resources": ["jquery.min.map"]
+}
