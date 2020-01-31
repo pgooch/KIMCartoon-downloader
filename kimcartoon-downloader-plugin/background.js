@@ -45,6 +45,7 @@ chrome.downloads.onDeterminingFilename.addListener(function(item, suggest){
 
 	// Update the downloadLocation with the file extension we can now gather and then suggest a file name to save to
 	downloadLocation += '.'+item.mime.split('/')[1];
+	downloadLocation = downloadLocation.replace(/[^A-z0-9 #_/\.-]/g,'')
 	console.log(`Starting download of "${downloadName}" from "${downloadSource}" to "${downloadLocation}".`);
 	suggest({filename: downloadLocation});
 });

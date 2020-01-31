@@ -12,7 +12,7 @@
 	"content_scripts" : [
 		{
 			"matches" : ["https://kimcartoon.to/Cartoon/*"],
-			"js" : ["jquery.js","content.js"]
+			"js" : ["content.js"]
 		}
 	],
 	"permissions": [
